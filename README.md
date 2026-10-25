@@ -70,3 +70,8 @@ python3 -m unittest discover -s tests -v
 ```
 
 官方行为参考：[本地 skill 与软链接](https://learn.chatgpt.com/docs/build-skills)、[用户配置](https://learn.chatgpt.com/docs/config-file/config-basic)。
+
+
+## 推荐 Skills
+
+精选编程、科研和实验整理技能及采用度、许可证说明见 [技能目录](docs/skills-catalog.md) 与 [第三方来源记录](THIRD_PARTY_SKILLS.md)。这些技能会随仓库现有安装器同步。

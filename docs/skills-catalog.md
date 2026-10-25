@@ -1,0 +1,26 @@
+# 精选 Skills
+
+这些技能按用途挑选，源代码固定到审查过的上游 commit；安装时不额外安装 Python 包。仓库 star 和技能下载量用于衡量采用度，不能证明技能在每个任务上都有效。
+
+## 编程
+
+- **systematic-debugging**：先复现并沿数据/调用链找原因，再做小范围修复。用于 bug、测试失败和异常行为。已调整成按问题复杂度调查，并移除上游测试提示样例和无关的多层校验建议。
+- **verification-before-completion**：让修复、测试、构建等结论对应到实际检查结果；未运行时直接说明。
+- **karpathy-guidelines**：减少臆造抽象、无关改动和不可能场景的防御性处理。小改动按实际需要处理，不强迫完整流程。
+
+## 科研与实验
+
+- **jupyter-notebook**：用模板创建实验/教程 notebook，组织目标、步骤和结果，便于复现。依赖 notebook 的环境由用户项目管理。
+- **statistical-analysis**：帮助选择分析方法、核对假设、报告效应量与不确定性。运行示例需 Python 3.12+ 独立环境；不自动装包。
+- **scientific-visualization**：帮助设计诚实、可读、可复查的科研图表。可选工具示例需 Python 3.11+；目标期刊的实时要求仍需核验。
+
+## 使用
+
+已有 `install.sh` 会自动把 `skills/` 下的目录链接到 Codex 用户级 skills。新服务器克隆仓库后运行：
+
+```bash
+./install.sh --dry-run
+./install.sh
+```
+
+来源、固定版本、许可证与本地改动见 [THIRD_PARTY_SKILLS.md](../THIRD_PARTY_SKILLS.md)。
