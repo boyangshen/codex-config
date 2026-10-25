@@ -10,7 +10,6 @@
 | 系统化调试 | `$systematic-debugging` |
 | 完成前验证 | `$verification-before-completion` |
 | 简洁编程准则 | `$karpathy-guidelines` |
-| 实验笔记本 | `$jupyter-notebook` |
 | 统计分析 | `$statistical-analysis` |
 | 科研可视化 | `$scientific-visualization` |
 
@@ -22,7 +21,6 @@
 
 ## 科研与实验
 
-- **jupyter-notebook**：用模板创建实验/教程 notebook，组织目标、步骤和结果，便于复现。依赖 notebook 的环境由用户项目管理。
 - **statistical-analysis**：帮助选择分析方法、核对假设、报告效应量与不确定性。运行示例需 Python 3.12+ 独立环境；不自动装包。
 - **scientific-visualization**：帮助设计诚实、可读、可复查的科研图表。可选工具示例需 Python 3.11+；目标期刊的实时要求仍需核验。
 
@@ -36,3 +34,7 @@
 ```
 
 来源、固定版本、许可证与本地改动见 [THIRD_PARTY_SKILLS.md](../THIRD_PARTY_SKILLS.md)。
+
+## 官方实验分析模板
+
+官方 `artifact-template-experiment-analysis` 用于把假设、方法、结果、解释、局限和下一步整理成实验报告。它来自已安装的官方模板插件，生成成品文档需要客户端提供文档生成功能。数值分析和绘图可结合本仓库的统计分析、科研可视化技能。
