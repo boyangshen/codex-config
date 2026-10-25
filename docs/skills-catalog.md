@@ -10,6 +10,7 @@
 | 系统化调试 | `$systematic-debugging` |
 | 完成前验证 | `$verification-before-completion` |
 | 简洁编程准则 | `$karpathy-guidelines` |
+| 实验分析 | `$experiment-analysis` |
 | 科研可视化 | `$scientific-visualization` |
 
 ## 编程
@@ -20,6 +21,7 @@
 
 ## 科研与实验
 
+- **experiment-analysis**：本地自定义实验分析技能，读取日志、CSV/JSON 与消融结果，核对比较口径并输出 Markdown 报告；按需使用普通 Python 脚本，不要求 Notebook 或客户端文档工具。
 - **scientific-visualization**：帮助设计诚实、可读、可复查的科研图表。可选工具示例需 Python 3.11+；目标期刊的实时要求仍需核验。
 
 ## 使用
@@ -33,6 +35,8 @@
 
 来源、固定版本、许可证与本地改动见 [THIRD_PARTY_SKILLS.md](../THIRD_PARTY_SKILLS.md)。
 
-## 官方实验分析模板
+## 实验分析使用示例
 
-官方 `artifact-template-experiment-analysis` 用于把假设、方法、结果、解释、局限和下一步整理成实验报告。它来自已安装的官方模板插件，生成成品文档需要客户端提供文档生成功能。实验图表可结合本仓库的科研可视化技能。
+```text
+使用 $experiment-analysis 分析当前项目已有实验结果，比较基线与改进方案，输出包含数据来源、对比表、结论和局限的 Markdown 报告；需要画图时结合 $scientific-visualization。
+```

@@ -1,0 +1,4 @@
+interface:
+  display_name: "实验分析"
+  short_description: "读取训练日志与实验结果，核对比较口径并整理对比表、结论及可追溯的实验报告"
+  default_prompt: "使用 $experiment-analysis 分析当前项目已有实验结果，比较基线和改进方案，整理数据来源、对比表、结论与局限，并按需输出 Markdown 报告和科研图表。"

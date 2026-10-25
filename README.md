@@ -56,6 +56,7 @@ presets 采用合并方式：更新仓库中存在的槽位，保留本机额外
 ## 包含内容
 
 - `skills/plan-implement-review/`：规划、实现交接与独立审查；每次规划/审查附可直接复制给 Gemini 的完整 Prompt。
+- `skills/experiment-analysis/`：读取已有实验结果，整理对比、消融和 Markdown 报告；可结合科研可视化画图。
 - `codex/shared-config.toml`：白名单导出的可迁移偏好。
 - `docs/`：通用协作方案与 Prompt。
 - `install.sh`、`sync.sh`、`bin/codex-personal`：安装、同步和启动入口。
