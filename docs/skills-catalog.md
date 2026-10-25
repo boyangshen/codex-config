@@ -2,6 +2,18 @@
 
 这些技能按用途挑选，源代码固定到审查过的上游 commit；安装时不额外安装 Python 包。仓库 star 和技能下载量用于衡量采用度，不能证明技能在每个任务上都有效。
 
+## 中文显示名称
+
+| 显示名称 | 调用名称 |
+|---|---|
+| 协作预设：规划与审查 | `$plan-implement-review` |
+| 系统化调试 | `$systematic-debugging` |
+| 完成前验证 | `$verification-before-completion` |
+| 简洁编程准则 | `$karpathy-guidelines` |
+| 实验笔记本 | `$jupyter-notebook` |
+| 统计分析 | `$statistical-analysis` |
+| 科研可视化 | `$scientific-visualization` |
+
 ## 编程
 
 - **systematic-debugging**：先复现并沿数据/调用链找原因，再做小范围修复。用于 bug、测试失败和异常行为。已调整成按问题复杂度调查，并移除上游测试提示样例和无关的多层校验建议。

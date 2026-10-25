@@ -1,5 +1,5 @@
 interface:
-  display_name: "Jupyter Notebooks"
+  display_name: "实验笔记本"
   short_description: "Create Jupyter notebooks for experiments and tutorials"
   icon_small: "./assets/jupyter-small.svg"
   icon_large: "./assets/jupyter.png"
