@@ -1,0 +1,4 @@
+interface:
+  display_name: "协作预设：规划与审查"
+  short_description: "规划交给 Codex，实现交给其他 Agent，按实际证据独立审查"
+  default_prompt: "使用 $plan-implement-review，为我的需求制定任务卡和可复制的实现 Prompt，并在实现返回后按同一契约审查。每次规划或审查后，附上已填写真实路径、可直接复制给 Gemini 的完整 Prompt。"

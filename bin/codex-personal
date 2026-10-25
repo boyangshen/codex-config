@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+# Resolve this wrapper through its installed symlink without hard-coded home paths.
+if command -v readlink >/dev/null 2>&1; then
+    wrapper=$(readlink -f -- "$0")
+else
+    echo '此启动器需要 Linux readlink -f。' >&2
+    exit 1
+fi
+repo_dir=$(CDPATH= cd -- "$(dirname -- "$wrapper")/.." && pwd)
+if [ "${CODEX_CONFIG_AUTO_SYNC:-1}" = 1 ]; then
+    "$repo_dir/sync.sh" >&2 || echo '未完成同步，将使用本机已有配置启动 Codex。' >&2
+fi
+exec codex "$@"

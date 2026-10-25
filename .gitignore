@@ -1,0 +1,16 @@
+# Local credentials and runtime state never belong in this repository.
+auth.json
+.env
+.env.*
+*.pem
+*.key
+*.sqlite*
+history.jsonl
+sessions/
+logs/
+cache/
+backups/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
