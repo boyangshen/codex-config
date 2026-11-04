@@ -8,7 +8,6 @@
 |---|---|
 | 协作预设：规划与审查 | `$plan-implement-review` |
 | 完成前验证 | `$verification-before-completion` |
-| 简洁编程准则 | `$karpathy-guidelines` |
 | Ponytail：极简编程 | `$ponytail` |
 | 实验分析 | `$experiment-analysis` |
 | 科研可视化 | `$scientific-visualization` |
@@ -16,7 +15,6 @@
 ## 编程
 
 - **verification-before-completion**：让修复、测试、构建等结论对应到实际检查结果；未运行时直接说明。
-- **karpathy-guidelines**：减少臆造抽象、无关改动和不可能场景的防御性处理。小改动按实际需要处理，不强迫完整流程。
 - **ponytail**：优先复用现有代码、标准库和平台能力，以最小改动完整完成任务，保留必要的验证、错误处理、安全和可访问性。支持 lite、full（默认）、ultra 三档；本仓库安装独立 skill，不包含上游插件 hooks 和配套命令。
 
 ## 科研与实验

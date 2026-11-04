@@ -6,7 +6,6 @@ Initial snapshots checked **2026-10-25**; Ponytail added and checked **2026-11-0
 |---|---|---|---|
 | `verification-before-completion` | [obra/superpowers](https://github.com/obra/superpowers/tree/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b), `2ce8aa15d05bd57213e6f746f953aafb7ded7a8b` | MIT; upstream `LICENSE` retained with the skill | 304,667 GitHub stars; [verification-before-completion](https://skills.sh/obra/superpowers/verification-before-completion) showed about 251.9k installs. Counts change over time. |
 | `scientific-visualization` | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills/tree/593377bb048752abb0152deab9fbb1083a6087df), `593377bb048752abb0152deab9fbb1083a6087df` | MIT; upstream `LICENSE.md` retained with each skill | 54,447 GitHub stars. The authors' [paper](https://arxiv.org/abs/2609.00065) reports no task-level evaluation or host skill-selection measurements; treat these as detailed procedural references, not experimentally proven improvements. |
-| `karpathy-guidelines` | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills/tree/2c606141936f1eeef17fa3043a72095b4765b9c2/skills/karpathy-guidelines), `2c606141936f1eeef17fa3043a72095b4765b9c2` | The skill frontmatter and repository README state MIT; the pinned snapshot has no standalone root `LICENSE` file. | 223,418 GitHub stars for the overall repository; not a per-skill usage metric. |
 | `ponytail` | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/96608e078b2d5ea607c5c3b8b5a54d1c1fba6846/skills/ponytail), `96608e078b2d5ea607c5c3b8b5a54d1c1fba6846` | MIT; upstream root `LICENSE` retained with the skill | Added at user request on 2026-11-05; no adoption metric collected. |
 
 ## Local curation and edits
@@ -15,7 +14,6 @@ Initial snapshots checked **2026-10-25**; Ponytail added and checked **2026-11-0
 
 - **Superpowers:** retained the verification entrypoint and upstream MIT license. The verification guide now distinguishes a check that ran from one that did not, without requiring a full test suite for every task.
 - **K-Dense:** retained complete selected skill folders (references, helper scripts, and visualization assets). Converted nonstandard `compatibility` frontmatter into descriptive metadata for loader compatibility. Python/package constraints are kept in the skill metadata; dependencies are not installed.
-- **Karpathy guidelines:** retained its single skill entrypoint as published. It is described as inspired by Andrej Karpathy's observations, not authored by him. Its source skill states MIT, and the source README also states MIT; no separate upstream license text was present in this pinned snapshot.
 - **Ponytail:** retained `skills/ponytail/SKILL.md` unchanged and the upstream root MIT license. Added a Chinese UI label. Installed as a standalone skill; the upstream plugin, lifecycle hooks, and companion skills are not included.
 
 Upstream wording/resources are preserved except for the adaptations listed above. Re-review upstream changes before updating pins.
