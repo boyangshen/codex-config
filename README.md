@@ -18,7 +18,7 @@ cd ~/codex-config
 自定义 skill 通过软链接加载到 `~/.agents/skills/`，并兼容 `~/.codex/skills/`。原 skills 先备份，不影响内置 `.system`。
 
 ```text
-$plan-implement-review 帮我规划这个需求，并输出给 Gemini 的完整 Prompt。
+$multi-step-plan 为当前任务生成多步骤实施计划，只做规划。
 ```
 
 ## 自动拉取后启动
@@ -37,7 +37,7 @@ CODEX_CONFIG_AUTO_SYNC=0 ~/.local/bin/codex-personal
 
 ## 修改与上传
 
-skill 链接直接指向本仓库，修改 `skills/plan-implement-review/` 即可。修改本机模型偏好或 `/presets` 后，可以重新导出白名单内的设置：
+skill 链接直接指向本仓库，修改对应的 `skills/<技能名>/` 即可。修改本机模型偏好或 `/presets` 后，可以重新导出白名单内的设置：
 
 ```bash
 ./install.sh --capture
@@ -57,8 +57,6 @@ presets 采用合并方式：更新仓库中存在的槽位，保留本机额外
 
 - `skills/multi-step-plan/`：生成或修订多步骤 Markdown 实施计划，明确设计、依赖、子代理分工、验收和交接。
 - `skills/subagent-plan-execute/`：按计划分派专属子代理执行并独立验收，支持用户指定模型、推理强度和角色覆盖。
-- `skills/plan-implement-review/`：规划、实现交接与独立审查；每次规划/审查附可直接复制给 Gemini 的完整 Prompt。
-- `skills/experiment-analysis/`：读取已有实验结果，整理对比、消融和 Markdown 报告；可结合科研可视化画图。
 - `codex/shared-config.toml`：白名单导出的可迁移偏好。
 - `docs/`：通用协作方案与 Prompt。
 - `install.sh`、`sync.sh`、`bin/codex-personal`：安装、同步和启动入口。

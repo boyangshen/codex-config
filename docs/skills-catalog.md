@@ -8,10 +8,8 @@
 |---|---|
 | 多步骤实施计划 | `$multi-step-plan` |
 | 子代理计划执行 | `$subagent-plan-execute` |
-| 协作预设：规划与审查 | `$plan-implement-review` |
 | 完成前验证 | `$verification-before-completion` |
 | 简洁编程准则 | `$karpathy-guidelines` |
-| 实验分析 | `$experiment-analysis` |
 | 科研可视化 | `$scientific-visualization` |
 
 ## 规划与执行
@@ -36,7 +34,6 @@ $subagent-plan-execute 按 plan.md 执行，子代理使用 gpt-6.1-sol，推理
 
 ## 科研与实验
 
-- **experiment-analysis**：本地自定义实验分析技能，读取日志、CSV/JSON 与消融结果，核对比较口径并输出 Markdown 报告；按需使用普通 Python 脚本，不要求 Notebook 或客户端文档工具。
 - **scientific-visualization**：帮助设计诚实、可读、可复查的科研图表。可选工具示例需 Python 3.11+；目标期刊的实时要求仍需核验。
 
 ## 使用
@@ -52,10 +49,4 @@ $subagent-plan-execute 按 plan.md 执行，子代理使用 gpt-6.1-sol，推理
 
 ```text
 $karpathy-guidelines 用清晰、最小的改动实现这个需求，保留必要验证。
-```
-
-## 实验分析使用示例
-
-```text
-使用 $experiment-analysis 分析当前项目已有实验结果，比较基线与改进方案，输出包含数据来源、对比表、结论和局限的 Markdown 报告；需要画图时结合 $scientific-visualization。
 ```

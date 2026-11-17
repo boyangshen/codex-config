@@ -53,10 +53,10 @@ class InstallTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             home = Path(directory)
             original = '# local\n[projects."/host/project"]\ntrust_level="trusted"\n'
-            (home / '.codex/skills/plan-implement-review').mkdir(parents=True)
-            (home / '.codex/skills/plan-implement-review/SKILL.md').write_text('old skill')
+            (home / '.codex/skills/multi-step-plan').mkdir(parents=True)
+            (home / '.codex/skills/multi-step-plan/SKILL.md').write_text('old skill')
             (home / '.agents/skills').mkdir(parents=True)
-            (home / '.agents/skills/plan-implement-review').symlink_to(home / '.codex/skills/plan-implement-review')
+            (home / '.agents/skills/multi-step-plan').symlink_to(home / '.codex/skills/multi-step-plan')
             (home / '.codex/config.toml').write_text(original)
             manage.install(home, dry_run=True)
             self.assertEqual((home / '.codex/config.toml').read_text(), original)
@@ -67,7 +67,7 @@ class InstallTests(unittest.TestCase):
             self.assertEqual(backup_files[0].read_text(), original)
             self.assertEqual(len(list((home / '.codex/backups').rglob('SKILL.md'))), 1)
             for base in ('.codex/skills', '.agents/skills'):
-                self.assertEqual((home / base / 'plan-implement-review').resolve(), (ROOT / 'skills/plan-implement-review').resolve())
+                self.assertEqual((home / base / 'multi-step-plan').resolve(), (ROOT / 'skills/multi-step-plan').resolve())
             self.assertTrue((home / '.local/bin/codex-personal').is_symlink())
             before_backups = list((home / '.codex/backups').iterdir())
             manage.install(home)

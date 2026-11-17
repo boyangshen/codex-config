@@ -2,7 +2,7 @@
 
 用途：在额度有限时，由推理能力较强的 agent 负责设计与验收，另一个 agent 负责范围明确的实现工作。适用于不同项目，不绑定具体模型、平台或当前仓库任务。
 
-本流程已整理为用户级 skill 的源码：[plan-implement-review](../skills/plan-implement-review/SKILL.md)。安装后可用 `$plan-implement-review` 调用；这是按任务启用的协作预设，不会自动启动 Gemini 或其他子 agent。若技能列表尚未刷新，可在新会话中调用，必要时重启 Codex。
+本仓库提供两份配套技能：[multi-step-plan](../skills/multi-step-plan/SKILL.md) 用于生成多步骤计划，[subagent-plan-execute](../skills/subagent-plan-execute/SKILL.md) 用于主代理协调、专属子代理执行与验收；子代理模型和推理强度可由用户指定。本文保留通用协作方法与手工任务卡参考，实际使用以对应技能及用户本轮要求为准。
 
 统一调用模板见 [统一 Prompt](agent_collaboration_prompt.md)。复制其中的完整 Prompt，修改“本轮输入”即可。迁移到其他项目时，可复制这两份文件，也可以直接粘贴 Prompt；不要求目标项目已经存在这些文档。
 
