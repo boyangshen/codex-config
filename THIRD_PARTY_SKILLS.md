@@ -14,6 +14,6 @@ Initial snapshots checked **2026-10-25**; Ponytail added and checked **2026-11-0
 
 - **Superpowers:** retained the verification entrypoint and upstream MIT license. The verification guide now distinguishes a check that ran from one that did not, without requiring a full test suite for every task.
 - **K-Dense:** retained complete selected skill folders (references, helper scripts, and visualization assets). Converted nonstandard `compatibility` frontmatter into descriptive metadata for loader compatibility. Python/package constraints are kept in the skill metadata; dependencies are not installed.
-- **Ponytail:** retained `skills/ponytail/SKILL.md` unchanged and the upstream root MIT license. Added a Chinese UI label. Installed as a standalone skill; the upstream plugin, lifecycle hooks, and companion skills are not included.
+- **Ponytail:** retained the skill body and upstream root MIT license. Added a Chinese UI label. Moved the upstream `argument-hint` frontmatter field under `metadata` for Codex skill-validator compatibility; its value and mode instructions are preserved. Installed as a standalone skill; the upstream plugin, lifecycle hooks, and companion skills are not included.
 
 Upstream wording/resources are preserved except for the adaptations listed above. Re-review upstream changes before updating pins.
