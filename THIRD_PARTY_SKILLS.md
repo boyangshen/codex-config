@@ -1,12 +1,12 @@
 # Third-party skills: sources and review notes
 
-Initial snapshots checked **2026-10-25**; Ponytail added and checked **2026-11-05**. Skills are pinned to immutable upstream commit hashes. Star and download counts are adoption signals only; they are not controlled measures of correctness. No source project's dependencies are installed by this repository.
+Initial snapshots checked **2026-10-25**; Karpathy guidelines restored **2026-11-17** from the previously curated snapshot. Skills are pinned to immutable upstream commit hashes. Star and download counts are adoption signals only; they are not controlled measures of correctness. No source project's dependencies are installed by this repository.
 
 | Local skill | Upstream source and pinned commit | License stated by source | Popularity evidence at snapshot |
 |---|---|---|---|
 | `verification-before-completion` | [obra/superpowers](https://github.com/obra/superpowers/tree/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b), `2ce8aa15d05bd57213e6f746f953aafb7ded7a8b` | MIT; upstream `LICENSE` retained with the skill | 304,667 GitHub stars; [verification-before-completion](https://skills.sh/obra/superpowers/verification-before-completion) showed about 251.9k installs. Counts change over time. |
 | `scientific-visualization` | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills/tree/593377bb048752abb0152deab9fbb1083a6087df), `593377bb048752abb0152deab9fbb1083a6087df` | MIT; upstream `LICENSE.md` retained with each skill | 54,447 GitHub stars. The authors' [paper](https://arxiv.org/abs/2609.00065) reports no task-level evaluation or host skill-selection measurements; treat these as detailed procedural references, not experimentally proven improvements. |
-| `ponytail` | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/96608e078b2d5ea607c5c3b8b5a54d1c1fba6846/skills/ponytail), `96608e078b2d5ea607c5c3b8b5a54d1c1fba6846` | MIT; upstream root `LICENSE` retained with the skill | Added at user request on 2026-11-05; no adoption metric collected. |
+| `karpathy-guidelines` | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills/tree/2c606141936f1eeef17fa3043a72095b4765b9c2/skills/karpathy-guidelines), `2c606141936f1eeef17fa3043a72095b4765b9c2` | The skill frontmatter and repository README state MIT; the pinned snapshot has no standalone root `LICENSE` file. | 223,418 GitHub stars for the overall repository; not a per-skill usage metric. |
 
 ## Local curation and edits
 
@@ -14,6 +14,6 @@ Initial snapshots checked **2026-10-25**; Ponytail added and checked **2026-11-0
 
 - **Superpowers:** retained the verification entrypoint and upstream MIT license. The verification guide now distinguishes a check that ran from one that did not, without requiring a full test suite for every task.
 - **K-Dense:** retained complete selected skill folders (references, helper scripts, and visualization assets). Converted nonstandard `compatibility` frontmatter into descriptive metadata for loader compatibility. Python/package constraints are kept in the skill metadata; dependencies are not installed.
-- **Ponytail:** retained the skill body and upstream root MIT license. Added a Chinese UI label. Moved the upstream `argument-hint` frontmatter field under `metadata` for Codex skill-validator compatibility; its value and mode instructions are preserved. Installed as a standalone skill; the upstream plugin, lifecycle hooks, and companion skills are not included.
+- **Karpathy guidelines:** retained its single skill entrypoint as published. It is described as inspired by Andrej Karpathy's observations, not authored by him. Its source skill states MIT, and the source README also states MIT; no separate upstream license text was present in this pinned snapshot.
 
 Upstream wording/resources are preserved except for the adaptations listed above. Re-review upstream changes before updating pins.
