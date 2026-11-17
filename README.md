@@ -55,6 +55,8 @@ presets 采用合并方式：更新仓库中存在的槽位，保留本机额外
 
 ## 包含内容
 
+- `skills/multi-step-plan/`：生成或修订多步骤 Markdown 实施计划，明确设计、依赖、子代理分工、验收和交接。
+- `skills/subagent-plan-execute/`：按计划分派专属子代理执行并独立验收，支持用户指定模型、推理强度和角色覆盖。
 - `skills/plan-implement-review/`：规划、实现交接与独立审查；每次规划/审查附可直接复制给 Gemini 的完整 Prompt。
 - `skills/experiment-analysis/`：读取已有实验结果，整理对比、消融和 Markdown 报告；可结合科研可视化画图。
 - `codex/shared-config.toml`：白名单导出的可迁移偏好。

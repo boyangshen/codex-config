@@ -1,0 +1,4 @@
+interface:
+  display_name: "多步骤实施计划"
+  short_description: "把目标整理为详细多步骤计划，明确设计、依赖、子代理分工与验收"
+  default_prompt: "使用 $multi-step-plan，根据我的目标和现有项目生成多步骤 Markdown 实施计划，明确子代理分工、输入产物、验收和交接；本轮只规划。"

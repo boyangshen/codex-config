@@ -1,0 +1,4 @@
+interface:
+  display_name: "子代理计划执行"
+  short_description: "按计划分派专属子代理，支持指定模型与推理强度，完成交接和验收"
+  default_prompt: "使用 $subagent-plan-execute，按我的计划分步骤执行，子代理使用本次指定的模型和推理强度，并完成交接、验收和交付。"
