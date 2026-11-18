@@ -1,12 +1,12 @@
 # Portable preferences only; machine-local state is excluded.
-model = "gpt-6.1-sol"
-model_reasoning_effort = "high"
-plan_mode_reasoning_effort = "high"
+model = "gpt-6.2-sol"
+model_reasoning_effort = "xhigh"
+plan_mode_reasoning_effort = "max"
 service_tier = "default"
 model_context_window = 500000
 model_auto_compact_token_limit = 450000
 approvals_reviewer = "auto_review"
 
 [tui]
-theme = "catppuccin-frappe"
+theme = "two-dark"
 fullscreen_transcript = true

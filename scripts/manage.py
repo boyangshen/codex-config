@@ -19,6 +19,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parents[1]
 SHARED = ROOT / 'codex' / 'shared-config.toml'
+STORAGE_RULE = '默认遵循 `project-storage` 技能。'
 SAFE_PATHS = (
     ('model',), ('model_reasoning_effort',), ('plan_mode_reasoning_effort',),
     ('service_tier',), ('model_context_window',), ('model_auto_compact_token_limit',),
@@ -182,6 +183,9 @@ def install(home, dry_run=False):
     config = home / '.codex' / 'config.toml'
     original = config.read_text() if config.exists() else ''
     merged = merge_text(original, shared)
+    instructions = home / '.codex/AGENTS.md'
+    current_rules = instructions.read_text() if instructions.exists() else ''
+    add_storage_rule = STORAGE_RULE not in current_rules
     links = []
     for skill in sorted((ROOT / 'skills').iterdir()):
         if skill.is_dir() and (skill / 'SKILL.md').is_file():
@@ -192,6 +196,8 @@ def install(home, dry_run=False):
     changes = [str(p) for p, _ in pending]
     if original != merged:
         changes.append(str(config))
+    if add_storage_rule:
+        changes.append(str(instructions))
     if dry_run:
         print('计划更新：\n' + '\n'.join(changes) if changes else '已是最新，无需修改。')
         return
@@ -214,6 +220,9 @@ def install(home, dry_run=False):
             backup_path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
         path.symlink_to(target, target_is_directory=target.is_dir())
+    if add_storage_rule:
+        with instructions.open('a', encoding='utf-8') as rules:
+            rules.write(('\n\n' if current_rules else '') + STORAGE_RULE + '\n')
     state_home = Path(os.environ.get('XDG_STATE_HOME', str(home / '.local/state'))) if home == Path.home() else home / '.local/state'
     atomic_write(state_home / 'codex-config/python', sys.executable + '\n')
     print('已安装：配置已合并，skills 与 codex-personal 已链接。')

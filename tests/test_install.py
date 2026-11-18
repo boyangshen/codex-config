@@ -58,7 +58,10 @@ class InstallTests(unittest.TestCase):
             (home / '.agents/skills').mkdir(parents=True)
             (home / '.agents/skills/multi-step-plan').symlink_to(home / '.codex/skills/multi-step-plan')
             (home / '.codex/config.toml').write_text(original)
+            instructions = home / '.codex/AGENTS.md'
+            instructions.write_text('# Local preferences\nKeep this rule.')
             manage.install(home, dry_run=True)
+            self.assertEqual(instructions.read_text(), '# Local preferences\nKeep this rule.')
             self.assertEqual((home / '.codex/config.toml').read_text(), original)
             self.assertFalse((home / '.codex/backups').exists())
             manage.install(home)
@@ -72,6 +75,8 @@ class InstallTests(unittest.TestCase):
             before_backups = list((home / '.codex/backups').iterdir())
             manage.install(home)
             self.assertEqual(before_backups, list((home / '.codex/backups').iterdir()))
+            self.assertEqual(instructions.read_text(), '# Local preferences\nKeep this rule.\n\n' + manage.STORAGE_RULE + '\n')
+            self.assertTrue((home / '.codex/skills/project-storage/SKILL.md').is_file())
             self.assertEqual(manage.tomllib.loads((home / '.codex/config.toml').read_text())['projects']['/host/project']['trust_level'], 'trusted')
 
     def test_wrapper_forwards_arguments_when_sync_is_disabled(self):

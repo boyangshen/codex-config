@@ -55,6 +55,8 @@ presets 采用合并方式：更新仓库中存在的槽位，保留本机额外
 
 ## 包含内容
 
+安装时会将 `project-storage` 加入个人 `~/.codex/AGENTS.md` 的默认规则，并保留已有指令。该技能根据每台机器的工作区和实际挂载选择代码、环境、数据、权重与结果的路径。
+
 - `skills/multi-step-plan/`：生成或修订多步骤 Markdown 实施计划，明确设计、依赖、子代理分工、验收和交接。
 - `skills/subagent-plan-execute/`：按计划分派专属子代理执行并独立验收，支持用户指定模型、推理强度和角色覆盖。
 - `codex/shared-config.toml`：白名单导出的可迁移偏好。
